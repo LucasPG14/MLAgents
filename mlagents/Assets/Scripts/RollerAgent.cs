@@ -11,6 +11,7 @@ public class RollerAgent : Agent
     Rigidbody rBody;
     public Transform target;
     public float forceMultiplier;
+    public int numActions = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -52,13 +53,27 @@ public class RollerAgent : Agent
         // Distance left to the target
         float distanceToTarget = Vector3.Distance(this.transform.localPosition, target.localPosition);
 
+        numActions++;
+        Debug.Log("Num Actions: " + numActions);
+
         // Check if we reached the target or we have fallen
         if (distanceToTarget < 1.42f)
         {
             SetReward(1.0f);
+            numActions = 0;
             EndEpisode();
         }
-        else if (this.transform.localPosition.y < 0.0f) EndEpisode();
+        else if (this.transform.localPosition.y < 0.0f)
+        {
+            numActions = 0;
+            EndEpisode();
+        }
+        else if (numActions >= 1000)
+        {
+            numActions = 0;
+            SetReward(-1.0f);
+            EndEpisode();
+        }
     }
 
     public override void Heuristic(in ActionBuffers actionsOut)
