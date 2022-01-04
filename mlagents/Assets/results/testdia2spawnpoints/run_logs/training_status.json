@@ -1,0 +1,47 @@
+{
+    "RollerBall": {
+        "checkpoints": [
+            {
+                "steps": 460068,
+                "file_path": "results\\testdia2spawnpoints\\RollerBall\\RollerBall-460068.onnx",
+                "reward": 0.8352941029212054,
+                "creation_time": 1641163907.4635944,
+                "auxillary_file_paths": [
+                    "results\\testdia2spawnpoints\\RollerBall\\RollerBall-460068.pt"
+                ]
+            },
+            {
+                "steps": 499998,
+                "file_path": "results\\testdia2spawnpoints\\RollerBall\\RollerBall-499998.onnx",
+                "reward": 0.5290322303771973,
+                "creation_time": 1641172108.4792116,
+                "auxillary_file_paths": [
+                    "results\\testdia2spawnpoints\\RollerBall\\RollerBall-499998.pt"
+                ]
+            },
+            {
+                "steps": 546177,
+                "file_path": "results\\testdia2spawnpoints\\RollerBall\\RollerBall-546177.onnx",
+                "reward": 0.6636363430456682,
+                "creation_time": 1641172798.6082184,
+                "auxillary_file_paths": [
+                    "results\\testdia2spawnpoints\\RollerBall\\RollerBall-546177.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 546177,
+            "file_path": "results\\testdia2spawnpoints\\RollerBall.onnx",
+            "reward": 0.6636363430456682,
+            "creation_time": 1641172798.6082184,
+            "auxillary_file_paths": [
+                "results\\testdia2spawnpoints\\RollerBall\\RollerBall-546177.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}
